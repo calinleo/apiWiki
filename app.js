@@ -3,7 +3,12 @@ window.onload = function(){
 
     function showResults() {
         
-        var url = 'https://randomuser.me/api';
+        //var url = 'https://randomuser.me/api';
+        var searchTerm = document.querySelector('input[name="searchTerm"]').value
+
+        var url = 'https://en.wikipedia.org/w/api.php?format=json&action=opensearch&origin=*&search=' + searchTerm;
+        console.log(searchTerm)
+
         ajaxJs(url, function(response){
             console.log(response)
         })

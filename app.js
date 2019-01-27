@@ -9,6 +9,7 @@ window.onload = function(){
         var url = 'https://en.wikipedia.org/w/api.php?format=json&action=opensearch&origin=*&search=' + searchTerm;
         // console.log(searchTerm)
         var output = document.querySelector('#output')
+        output.innerHTML = "<h2>Search term: " + searchTerm + "</h2>"
 
         ajaxJs(url, function(response){
             // console.log(response)
@@ -17,7 +18,9 @@ window.onload = function(){
                 //console.log(response[x]) // resturns all arrays
                 //console.log(response[x][0])  // returns the first of the array
                 var holder = typeof response[x] == 'string' ? response[x] : response[x][0];
-                console.log(holder)
+                //console.log(holder)
+                //output.innerHTML = output.innerHTML + '<div>' + holder + '</div>';
+                output.innerHTML += '<div>' + holder + '</div>';
 
 
             }

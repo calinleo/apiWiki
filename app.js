@@ -15,7 +15,11 @@ window.onload = function(){
             for ( var x in response){
                 //console.log(x)
                 //console.log(response[x]) // resturns all arrays
-                console.log(response[x][0])  // returns the first of the array
+                //console.log(response[x][0])  // returns the first of the array
+                var holder = typeof response[x] == 'string' ? response[x] : response[x][0];
+                console.log(holder)
+
+
             }
         })
     }

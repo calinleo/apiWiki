@@ -7,10 +7,16 @@ window.onload = function(){
         var searchTerm = document.querySelector('input[name="searchTerm"]').value
 
         var url = 'https://en.wikipedia.org/w/api.php?format=json&action=opensearch&origin=*&search=' + searchTerm;
-        console.log(searchTerm)
+        // console.log(searchTerm)
+        var output = document.querySelector('#output')
 
         ajaxJs(url, function(response){
-            console.log(response)
+            // console.log(response)
+            for ( var x in response){
+                //console.log(x)
+                //console.log(response[x]) // resturns all arrays
+                console.log(response[x][0])  // returns the first of the array
+            }
         })
     }
 

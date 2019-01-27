@@ -22,3 +22,5 @@ window.onload = function(){
     }
 
 }
+
+// https://en.wikipedia.org/w/api.php?format=json&action=opensearch&origin=*&search=javascript
